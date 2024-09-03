@@ -1,0 +1,67 @@
+<!doctype html>
+
+
+<head> <title> Registration Form </title> 
+
+</head>
+
+<style>
+
+
+#main 
+{
+width:50%;
+margin:auto;
+//background:gray;
+}
+
+#table
+{
+width:100%;
+}
+
+td{width:50%;}
+input[type="text"]{width:100%;}
+input[type="password"]{width="100%"}
+ </style>
+
+<body>
+<div id="main">
+
+<table border="0"cellpadding="2%">
+<form action="http://tataplay/user/get.php" method="post">
+
+<caption>Registration Form </caption> 
+<tr>
+<td><label for="username"> User Name</lable> </td>
+<td><input placeholder="User Name" id="username" type="text" pattern="[A-Za-z]"tittle="Enter name here"></td></tr>
+
+<tr>
+<td><label for="password">User Password</lable></td>
+<td><input placeholder="Type password here..."id="password"type="password"required></td>
+</tr>
+
+<tr>
+<td><label for="age">User Age</lable></td>
+<td><input id="age"type="Number"max="30" min="15"></td>
+
+</tr>
+
+<tr>
+<td><label for="message">Message</lable></td>
+<td><textarea placeholder="Type Feedback here..."rows="10" cols="50"></textarea></td>
+</tr>
+<tr>
+<td> </td>
+<td><input type="submit" value="Register"><input type="Reset"></td>
+</tr>
+
+
+</form>
+</table>
+</div>
+
+
+</body>
+
+</html>
