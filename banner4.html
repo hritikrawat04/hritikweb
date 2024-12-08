@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+.picstyle{
+width:95%;
+height:400px ;
+position:absolute ;
+top:10px;
+left:40px;
+margin:auto;
+box-shadow: 10px 10px 10px gray;
+transition: 5s ease-in-out;
+}
+
+
+</style>
+<body onload="show()">
+
+<img class="picstyle" id="b1" src="images/b1.jpg" >
+<img class="picstyle" id="b2" src="images/b2.jpg" >
+<img class="picstyle" id="b3"  src="images/b3.jpg" >
+<img class="picstyle" id="b4" src="images/b4.jpg" >
+<img class="picstyle" id="b5" src="images/b5.jpg" >
+
+
+  <script>
+var c=-1
+var t
+//Recursive funciton
+
+var p= document.getElementById("b1")
+
+var p= document.getElementById("b2")
+
+var p= document.getElementById("b3")
+
+var p= document.getElementById("b4")
+
+var p= document.getElementById("b5")
+ 
+ function show()
+{
+ if(c<10)
+{ 
+c++ 
+
+}
+
+else{
+    c=1
+}
+
+switch(c)
+{
+case 1:
+b5.style.left="-1600px "    
+b5.style.opacity=0.2
+break;
+case 2:
+b4.style.left="-1600px "  
+b4.style.opacity=0.2
+break;
+case 3:
+b3.style.left="-1600px "  
+b3.style.opacity=0.2
+break;
+case 4:
+b2.style.left="-1600px "    
+b2.style.opacity=0.2
+break;
+case 5:
+b1.style.opacity=1;b1.style.left="40px "  
+  
+break;
+case 6: 
+b2.style.opacity=1;b2.style.left="40px "  
+break;
+case 7: 
+b3.style.opacity=1;b3.style.left="40px "  
+break;
+case 8: 
+b4.style.opacity=1;b4.style.left="40px "  
+break;
+case 9: 
+b5.style.opacity=1;b5.style.left="40px "  
+break;
+case 10: 
+b5.style.opacity=1;b5.style.left="40px "  
+break;
+
+}
+
+document.title=c
+t=setTimeout("show()", 5000 )
+
+
+}
+
+
+//Timer object 
+// var t= setInterval("show()",2000)
+
+
+
+
+
+  </script>  
+
+
+</body>
+</html>

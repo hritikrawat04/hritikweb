@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+ 
+ #mybox{
+
+  margin: auto;
+  text-align: center;
+ }
+
+
+ #but{
+  margin: auto;
+  color: burlywood;
+  text-align: center;
+ }
+
+</style>
+
+<body>
+   <div id="mybox">Clock</div>
+   <div id="but">
+   <button onClick="stopclock()">Pause</button>
+   <button onClick="starclock()">Play</button>
+  </div>
+   
+   
+   <script>
+
+
+    var clock = document.getElementById("mybox")
+    document.bgcolor = "Black"
+    clock.style ="box-shadow: 10px 10px 10px gray;text-align:center;background:maroon;"
+    clock.style.width ="600px"
+    clock.style.height ="100px"
+    var d
+
+    function show()
+    {
+     d = new Date()
+     clock.innerHTML=d.toLocaleTimeString()
+    }
+
+    var t = setInterval("show()",1000)
+    function stopclock()
+    {
+      clearInterval(t)
+    }
+
+    function starclock()
+    {
+     t = setInterval("show()",1000)
+    }
+
+ </script>
+
+
+</body>
+</html>

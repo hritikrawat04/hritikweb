@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    #bar{
+      text-align:right;
+      padding-right:50px;
+    }
+    
+    #dark,#light
+    {
+      background:black;
+      cursor:pointer;
+      text-align: center;
+      color: gold;
+      border-radius: 20px;
+      box-shadow: 2px 5px 5px black;
+      font-size: 15px;
+    }
+     
+    #topad{
+text-align: center;
+color: rgb(193, 157, 79);
+margin: auto;
+font-size: 100px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+
+
+    }
+    
+</style>
+<body>
+   
+    
+        <div id="bar"><button id="dark">Dark🧐</button><br><button id="light">light🙂</button>
+    
+    
+          <div id="topad" >
+            Welcome
+            </div>
+       
+        <script>
+    
+       var d =document.getElementById("dark")
+       var l =document.getElementById("light")
+       var m =document.createElement("span")
+       var b =document.getElementById("bl")
+       document.body.appendChild(m)
+    
+        function f1()
+        {
+          if(document.body.style.background="black")
+    
+          {
+            
+            
+            document.body.style="background=black;color:;"
+            
+          }
+          else
+          {
+    
+            
+             document.body.style="background:black;color:white;"
+          }
+      }
+        
+      m.style="transition:0.5s;opacity:0;position:absolute;top:0px;left:0px"
+      
+    
+      d.onclick = function()
+      {
+        document.body.style="background:black;color:white;"
+    
+      }
+       
+      l.onclick =function()
+      {
+        document.body.style="background:;color:;"
+      }
+    
+      d.onmouseover =function(e)
+      {
+        m.style.opacity=1
+        m.style.top =e.pageY+4+"px"
+        m.style.left =e.pageX-20+"px"
+        
+        document.title ="x ="+e.pageX+" y = "+e.pageY
+        d.style.transform="rotate(360deg)"
+    
+      }
+    
+      d.onmouseout =function()
+      {
+        m.style.opacity=0
+      }
+      
+      
+    
+      l.onmouseover = function(e)
+      {
+        m.style.opacity=1
+        m.style.top =e.pageY+5+"px"
+        m.style.left =e.pageX-65+"px"
+        
+        document.title ="x ="+e.pageX+" y ="+e.pageY
+      }
+    
+      l.mouseout =function(e)
+      {
+        m.style.opacity=0
+        
+      }
+    
+      
+    
+     
+      </script>
+
+     
+
+       
+          
+    
+    
+    
+   
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+#pic{
+  width:400px;
+  height:600px;
+  box-shadow:10px 10px 10px gray;
+  display:block;
+  margin:auto;
+}
+
+#myslider{
+  display:block;
+  margin:auto;
+  transition: all ease-in-out;
+  border-radius: 20px;
+  background-color: #6DAD68;
+}
+
+
+
+
+</style>
+
+
+<body>
+    <h1 style="text-align:center;font-family:verdana,Arial black;font-size:30px;color:#d4bc7a;box-shadow:10px 10px 10px gray;border-radius: 45px">Free Fire Character</h1>
+ 
+
+ <img src="images/f1.jpg" id="pic">
+ <input type="range" min="0" max="6" id="myslider">
+
+
+ <script>
+  //creating array is Javascript
+  /*
+  what is array:-colllection of related varibales i.e in javascript array is an object(class),
+  and used to create large no variables by single command eg:
+  index array=var uname=new array(3) //creating instance with five variables 
+  uname[0]="ravi"
+  uname[1]="rishi"
+  uname[2]="amit"
+  or
+  object array -= var uname=["ravi","rishi","amit"]
+
+  alert(uname[2])
+  */
+ 
+  var mycolor=["red","blue","green","orange","teal","brown"]
+  //alert(mycolor[3])
+  //document.bgcolor=mycolor[4]
+  //alert(mycolor.length)
+ 
+  var plist =["f1.jpg","f2.jpeg","f3.jpg","f4.jpg","f5.jpg","f6.jpg","f7.jpg"]
+
+  var p = document.getElementById("pic")
+
+  var s = document.getElementById("myslider")
+
+  s.onchange = function()
+  {
+    p.src="images/"+plist[s.value]
+  }
+
+ </script>
+  
+
+  
+
+</body>
+</html>
