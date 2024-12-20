@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#mycan 
+{ 
+
+position: relative;
+top: 50px;
+}
+#info
+{
+width:100% ;
+box-shadow: 10px 10px 10px gray;
+position:fixed;
+z-index:24;
+}
+
+
+
+
+</style>
+<body>
+<div id="info">Kyes:- e= Erase mode, g= draw mode on/off, spacebar= clear screen, c= For Color change, s= increase Brush Size, d= Decrease Brush Size  </div>
+
+    <canvas id="mycan" width="1600" height="800"></canvas>
+<script>
+var can = document.getElementById("mycan")
+var drawmode = false 
+var c = can.getContext("2d");
+var drawcolor = "yellow"
+var brushsize = "2"
+var r,g,b 
+
+function startdraw(e)
+{
+document.title="x= "+e.pageX+"y= "+e.pageY
+if(drawmode)
+{
+c.beginPath()
+c.arc(e.pageX-10,e.pageY-60,,0,2*Math.PI)
+c.fillStyle= drawcolor
+c.fill()
+}
+}
+function f1(e)
+{
+document.title=e.Keycode
+// 69= e 
+if(e.Keycode == 69 )
+{
+drawcolor="white"
+
+}
+
+// 71 = g drawmode on/of
+if(e.Keycode == 71 )
+{ if (drawmode)
+{drawmode = false }
+else 
+{drawmode= true}
+document.title = drawmode
+}
+// 83 = s
+if(e.Keycode == 83 )
+{
+brushsize++
+document.title = brushsize 
+}
+//  68 = D
+if(e.Keycode == 68 )
+{
+brushsize--
+document.title= brushsize
+}
+
+// spacebar = 32
+if(e.Keycode == 32 )
+{
+ c.clearRect(0,0,1500,900)
+
+}
+// 67 = c
+if(e.Keycode == 67 )
+{
+r = Math.round(Math.random()*225)
+g = Math.round(Math.random()*225)
+b = Math.round(Math.random()*225)
+
+drawcolor=`rgb(${r},${g},${b})`
+}
+}
+
+document.addEventListener("mousemove",startdraw)
+document.addEventListener("keydown", f1)
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
