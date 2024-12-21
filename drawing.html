@@ -14,10 +14,10 @@ top: 50px;
 }
 #info
 {
-width:100% ;
+width: 100% ;
 box-shadow: 10px 10px 10px gray;
-position:fixed;
-z-index:24;
+position: fixed ;
+z-index: 24;
 }
 
 
@@ -27,7 +27,7 @@ z-index:24;
 <body>
 <div id="info">Kyes:- e= Erase mode, g= draw mode on/off, spacebar= clear screen, c= For Color change, s= increase Brush Size, d= Decrease Brush Size  </div>
 
-    <canvas id="mycan" width="1600" height="800"></canvas>
+    <canvas id=" mycan " width="1600" height="800"></canvas>
 <script>
 var can = document.getElementById("mycan")
 var drawmode = false 
@@ -38,7 +38,7 @@ var r,g,b
 
 function startdraw(e)
 {
-document.title="x= "+e.pageX+"y= "+e.pageY
+document.title= "x= "+e.pageX+"y= "+e.pageY
 if(drawmode)
 {
 c.beginPath()
@@ -60,9 +60,13 @@ drawcolor="white"
 // 71 = g drawmode on/of
 if(e.Keycode == 71 )
 { if (drawmode)
-{drawmode = false }
+{
+    drawmode = false
+}
 else 
-{drawmode= true}
+{
+    drawmode= true
+}
 document.title = drawmode
 }
 // 83 = s
