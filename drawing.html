@@ -42,7 +42,7 @@ document.title= "x= "+e.pageX+"y= "+e.pageY
 if(drawmode)
 {
 c.beginPath()
-c.arc(e.pageX-10,e.pageY-60,,0,2*Math.PI)
+c.arc(e.pageX-10,e.pageY-60,0,2*Math.PI)
 c.fillStyle= drawcolor
 c.fill()
 }
@@ -91,9 +91,9 @@ if(e.Keycode == 32 )
 // 67 = c
 if(e.Keycode == 67 )
 {
-r = Math.round(Math.random()*225)
-g = Math.round(Math.random()*225)
-b = Math.round(Math.random()*225)
+r = Math.round(Math.random()*255)
+g = Math.round(Math.random()*255)
+b = Math.round(Math.random()*255)
 
 drawcolor=`rgb(${r},${g},${b})`
 }
