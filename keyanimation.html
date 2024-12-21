@@ -82,7 +82,7 @@ color:black;
     {
         case 39:
           L=L+s
-          if(L>=0)
+          if(L<window.innerwidth-200)
 
       {
         d1.style.left = L+"px"
@@ -107,22 +107,22 @@ color:black;
 
 
        case 40:
-        L=L+s
-        if(L<window.innerHeight)
+        t=t+s
+        if(t<window.innerHeight-100)
        {
-        d1.style.top = L+"px"
-          document.title = L
+        d1.style.top = t+"px"
+          document.title = t
        }
 
        break;
 
 
        case 38:
-        if(L>0)
+        if(t>0)
        {
-        L=L-s
-        d1.style.top = L+"px"
-          document.title = L
+        t=t-s
+        d1.style.top = t+"px"
+          document.title = t
 
        }
        break;
