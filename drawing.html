@@ -27,7 +27,7 @@ z-index: 24;
 <body>
 <div id="info">Kyes:- e= Erase mode, g= draw mode on/off, spacebar= clear screen, c= For Color change, s= increase Brush Size, d= Decrease Brush Size  </div>
 
-    <canvas id=" mycan " width="1600" height="800"></canvas>
+    <canvas id="mycan" width="1600" height="800"></canvas>
 <script>
 var can = document.getElementById("mycan")
 var drawmode = false 
@@ -42,23 +42,23 @@ document.title= "x= "+e.pageX+"y= "+e.pageY
 if(drawmode)
 {
 c.beginPath()
-c.arc(e.pageX-10,e.pageY-60,0,2*Math.PI)
+c.arc(e.pageX-10,e.pageY-60,brushsize,0,2*Math.PI)
 c.fillStyle= drawcolor
 c.fill()
 }
 }
 function f1(e)
 {
-document.title=e.Keycode
+document.title=e.keyCode
 // 69= e 
-if(e.Keycode == 69 )
+if(e.keyCode == 69 )
 {
 drawcolor="white"
 
 }
 
 // 71 = g drawmode on/of
-if(e.Keycode == 71 )
+if(e.keyCode == 71 )
 { if (drawmode)
 {
     drawmode = false
@@ -70,26 +70,26 @@ else
 document.title = drawmode
 }
 // 83 = s
-if(e.Keycode == 83 )
+if(e.keyCode == 83 )
 {
 brushsize++
 document.title = brushsize 
 }
 //  68 = D
-if(e.Keycode == 68 )
+if(e.keyCode== 68 )
 {
 brushsize--
 document.title= brushsize
 }
 
 // spacebar = 32
-if(e.Keycode == 32 )
+if(e.keyCode== 32 )
 {
  c.clearRect(0,0,1500,900)
 
 }
 // 67 = c
-if(e.Keycode == 67 )
+if(e.keyCode == 67 )
 {
 r = Math.round(Math.random()*255)
 g = Math.round(Math.random()*255)
